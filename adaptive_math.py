@@ -30,13 +30,21 @@ def incorrectAns(ans):
 
 
 #do division
+print("""
+which of the following modules would you like to do?
 
-a=float(input())
-if a == 1:
+addition
+subtraction
+ultiplication
+division
+
+""")
+ask=input()
+if ask == 'addition':
     addition()
-elif a == 2:
+elif ask == 'subtraction':
     subtraction()
-elif a == 3:
+elif ask == 'multiplication':
     multiplication()
-elif a == 4:
-    addition()
+elif ask == 'division':
+    division()
