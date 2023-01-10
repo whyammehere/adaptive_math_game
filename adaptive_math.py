@@ -8,7 +8,7 @@ from division import *
 
 #redo leveling systems
 
-def randAns(ans,deviation):
+def randAns(ans,deviation=2):
     a=[ans]
     for i in range(3):
         x=randint(ans-deviation,ans+deviation)

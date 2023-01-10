@@ -15,7 +15,7 @@ def addition():
             print(x[j], end = ' + ')
         print(x[-1], '= ?')
         #print(sum(x))
-        y=randAns(sum(x))
+        y=randAns(sum(x),level*3)
         try:
             if y[input()] == sum(x):
                 print('correct!')
@@ -25,12 +25,12 @@ def addition():
                     a=0
                     level +=1
             else:
-                incorrectAns()
+                incorrectAns(sum(x))
                 incorrect+=1
                 if incorrect%3==0 and level > 1:
                     level -= 1        
         except:
-            incorrectAns()
+            incorrectAns(sum(x))
             incorrect+=1
             
     print('congrats! you completed the addition module!')
