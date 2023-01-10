@@ -2,40 +2,57 @@ from random import *
 
 #redo leveling systems
 
+def randAns(ans,deviation):
+    a=[ans]
+    for i in range(3):
+        x=randint(ans-deviation,ans+deviation)
+        if x != a:
+            a.append(x)
+    
+    shuffle(a)
+    b={"A":a[0],"B":a[1],"C":a[2],"D":a[3]}
+    print("A:",a[0],"B:",a[1],"C:",a[2],"D:",a[3])
+    return b
+
+def incorrectAns(ans):
+    print('incorrect')
+    print('the correct answer is',ans)
+    print()
+
 def addition():
     a=0
-    level = 2
+    level = 1
     incorrect=0
-    for i in range(100):
+    for i in range(50):
         
         seed()
         x=[]
-        for j in range(randint(2,level)):
+        for j in range(randint(2,level+1)):
             x.append(randint(0,level*10))
         for j in range(len(x)-1):
             print(x[j], end = ' + ')
         print(x[-1], '= ?')
         #print(sum(x))
+        y=randAns(sum(x))
         try:
-            if float(input()) == sum(x):
+            if y[input()] == sum(x):
                 print('correct!')
                 print()
                 a+=1
-                if a == 12:
+                if a >= 8:
                     a=0
                     level +=1
             else:
-                print('incorrect')
+                incorrectAns()
                 incorrect+=1
-                if incorrect%3==0 and level > 2:
-                    level -= 1
-                print('the correct answer is',sum(x))
-                print()
+                if incorrect%3==0 and level > 1:
+                    level -= 1        
         except:
-            print('incorrect')
+            incorrectAns()
             incorrect+=1
+            
     print('congrats! you completed the addition module!')
-    print('you score is:', (100-incorrect), '%')
+    print('you score is:', 2*(50-incorrect), '%')
 
 def subtraction():
     a=0
