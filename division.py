@@ -57,6 +57,6 @@ def division():
     round(per)
     print('you completed',r,' problems, great job :)')
     print('you had a', per ,'% accuracy')
-    if per == 100
+    if per == 100:
         print('You answered perfectly!!!')
 division()
