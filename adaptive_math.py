@@ -5,7 +5,6 @@ from subtraction import *
 from multiplication import *
 from division import *
 
-
 #redo leveling systems
 
 def randAns(ans,deviation=2):
