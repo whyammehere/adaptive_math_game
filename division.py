@@ -10,10 +10,10 @@ def division():
         if score<5:
             x = random.randint(1,6)
             y = random.randint(1,6)     #level 1
-        if 5<=score<=10:
+        elif 5<=score<=10:
             x = random.randint(2,8)
             y = random.randint(2,8)   # level 2
-        if 10<score:
+        elif score > 10:
             x = random.randint(3,12)
             y = random.randint(3,12)     #level 3
         z = x*y
@@ -56,7 +56,7 @@ def division():
     per = 100* score/attempts
     round(per)
     print('you completed',r,' problems, great job :)')
-    print('you had a', per ,'% accuracy')
+    print(f'you had a {per}% accuracy')
     if per == 100:
         print('You answered perfectly!!!')
 division()
