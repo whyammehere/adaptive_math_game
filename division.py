@@ -5,6 +5,8 @@ def division():
     score = 0
     ans = ['a','b','c','d']
     attempts = 0
+    x = 0
+    y = 0
     r = int(input('how many questions would you like to do:'))
     while score<r:
         if score<5:
