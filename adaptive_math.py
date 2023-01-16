@@ -34,7 +34,7 @@ which of the following modules would you like to do?
 
 addition
 subtraction
-ultiplication
+multiplication
 division
 
 """)

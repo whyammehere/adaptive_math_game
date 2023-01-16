@@ -1,5 +1,4 @@
-from random import*
-from adaptive_math import *
+from random import *
 
 def multiplication():
     a=0

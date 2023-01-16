@@ -1,5 +1,5 @@
-from random import*
-from adaptive_math import *
+from random import *
+from adaptive_math import randAns, incorrectAns
 
 def addition():
     a=0
