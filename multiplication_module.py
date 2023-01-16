@@ -10,9 +10,11 @@ def multiplication():
         seed()
         x = (randint(0, level*10))
         y = (randint(0, level*10))
+        print('----------------------')
         print(x, '*', y, '= ?')
         try:
             if float(input()) == x*y:
+                print()
                 print('correct!')
                 print()
                 a += 1
@@ -20,6 +22,7 @@ def multiplication():
                     a = 0
                     level += 1
             else:
+                print()
                 print('incorrect')
                 incorrect += 1
                 if incorrect % 3 == 0 and level > 1:
@@ -27,7 +30,9 @@ def multiplication():
                 print('the correct answer is', x*y)
                 print()
         except:
+            print()
             print('incorrect')
+            print("please enter a number")
             incorrect += 1
     print('congrats! you completed the multiplication module!')
     print('you score is:', (100-incorrect), '%')

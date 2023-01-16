@@ -2,11 +2,12 @@ from random import randint, seed
 from adaptive_math import randAns, incorrectAns
 
 
-def addition():
+def addit():
     a = 0
     level = 1
     incorrect = 0
-    for i in range(50):
+    number = int(input("How many questions will you like to do? "))
+    for i in range(number):
 
         seed()
         x = []
@@ -35,4 +36,5 @@ def addition():
             incorrect += 1
 
     print('congrats! you completed the addition module!')
-    print('you score is:', 2*(50-incorrect), '%')
+    score = ((number-incorrect)/number) * 10
+    print(f'your score is: {round(score, 2)} ')

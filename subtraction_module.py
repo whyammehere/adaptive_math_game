@@ -8,6 +8,7 @@ def subtraction():
     x = 0
     y = 0
     ans = ["a", "b", "c", "d"]
+    print("This module contains 31 questions, but for every question you answer incorrectly, you must complete 2 more. ")
     while level < 7:
         if score < 5:
             x = random.randint(1, 10)
@@ -56,6 +57,7 @@ def subtraction():
         try:
             w = input("? = ")
             if g[w] == x:
+                print("Correct!")
                 score += 1
             else:
                 print("Sorry, that's wrong. The answer was", x)

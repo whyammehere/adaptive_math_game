@@ -39,7 +39,7 @@ division
 """)
 ask = input()
 if ask == 'addition':
-    addition_module.addition()
+    addition_module.addit()
 elif ask == 'subtraction':
     subtraction_module.subtraction()
 elif ask == 'multiplication':
