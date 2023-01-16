@@ -7,7 +7,7 @@ def division():
     attempts = 0
     x = 0
     y = 0
-    r = int(input('how many questions would you like to do:'))
+    r = int(input('how many questions would you like to do: '))
     while score<r:
         if score<5:
             x = random.randint(1,6)
@@ -40,7 +40,8 @@ def division():
             print(m,g[m])
         
         try:
-            w = input('? =')
+            print()
+            w = input('? = ')
         
             if g[w] == x:
                 score +=1
@@ -57,8 +58,12 @@ def division():
         print()
     per = 100* score/attempts
     round(per)
-    print('you completed',r,' problems, great job :)')
-    print(f'you had a {per}% accuracy')
+    print(f'you completed {r} problems, great job :)')
+    print(f'you had a {round(per,2)}% accuracy')
     if per == 100:
-        print('You answered perfectly!!!')
+        print('You answered perfectly!')
+    elif per > 90:
+        print("Keep practicing to get a perfect score!")
+    elif per > 0:
+        print("Keep practicing to get a better score!")
 division()
