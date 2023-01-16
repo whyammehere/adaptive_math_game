@@ -1,22 +1,22 @@
-from random import*
+from random import *
 from adaptive_math import *
 
 def multiplication():
     a=0
     level = 1
     incorrect=0
-    for i in range(100):
+    for i in range(50):
         
         seed()
-        x=(randint(0,level*10))
-        y=(randint(0,level*10))
+        x=(randint(level*-10,level*10))
+        y=(randint(level*-10,level*10))
         print(x, '*', y, '= ?')
         try:
             if float(input()) == x*y:
                 print('correct!')
                 print()
                 a+=1
-                if a == 10:
+                if a == 9:
                     a=0
                     level +=1
             else:
