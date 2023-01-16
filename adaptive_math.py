@@ -1,50 +1,48 @@
-from random import *
+from random import randint, shuffle
 
-from addition import *
-from subtraction import *
-from multiplication import *
-from division import *
+import addition_module
+import subtraction_module
+import multiplication_module
+import division_module
+
+# redo leveling systems
 
 
-#redo leveling systems
-
-def randAns(ans,deviation=2):
-    a=[ans]
+def randAns(ans, deviation=2):
+    a = [ans]
     for i in range(3):
-        x=randint(ans-deviation,ans+deviation)
+        x = randint(ans-deviation, ans+deviation)
         if x != a:
             a.append(x)
-    
+
     shuffle(a)
-    b={"A":a[0],"B":a[1],"C":a[2],"D":a[3]}
-    print("A:",a[0],"B:",a[1],"C:",a[2],"D:",a[3])
+    b = {"A": a[0], "B": a[1], "C": a[2], "D": a[3]}
+    print("A:", a[0], "B:", a[1], "C:", a[2], "D:", a[3])
     return b
+
 
 def incorrectAns(ans):
     print('incorrect')
-    print('the correct answer is',ans)
+    print('the correct answer is', ans)
     print()
 
 
-
-
-
-#do division
+# do division
 print("""
 which of the following modules would you like to do?
 
 addition
 subtraction
-ultiplication
+multiplication
 division
 
 """)
-ask=input()
+ask = input()
 if ask == 'addition':
-    addition()
+    addition_module.addit()
 elif ask == 'subtraction':
-    subtraction()
+    subtraction_module.subtraction()
 elif ask == 'multiplication':
-    multiplication()
+    multiplication_module.multiplication()
 elif ask == 'division':
-    division()
+    division_module.division()
