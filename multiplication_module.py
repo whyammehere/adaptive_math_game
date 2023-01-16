@@ -1,4 +1,4 @@
-from random import *
+from random import randint, seed
 
 def multiplication():
     a=0

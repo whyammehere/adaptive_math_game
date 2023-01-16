@@ -1,6 +1,6 @@
-from random import *
+from random import randint, shuffle
 
-from addition_module import addition
+# from a import add
 from subtraction_module import subtraction
 from multiplication_module import multiplication
 from division_module import division
@@ -40,7 +40,8 @@ division
 """)
 ask=input()
 if ask == 'addition':
-    addition()
+    # add()
+    print("hi")
 elif ask == 'subtraction':
     subtraction()
 elif ask == 'multiplication':

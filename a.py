@@ -1,7 +1,7 @@
-from random import *
+from random import randint, seed
 from adaptive_math import randAns, incorrectAns
 
-def addition():
+def add():
     a=0
     level = 1
     incorrect=0
