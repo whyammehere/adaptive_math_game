@@ -1,9 +1,9 @@
 from random import *
 
-from addition import addition
-from subtraction import subtraction
-from multiplication import multiplication
-from division import division
+from addition_module import addition
+from subtraction_module import subtraction
+from multiplication_module import multiplication
+from division_module import division
 
 #redo leveling systems
 
