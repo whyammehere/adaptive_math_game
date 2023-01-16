@@ -4,7 +4,7 @@ import random
 def subtraction():
     level = 1
     score = 0
-    #two numbers that are added together 
+    # two numbers that are added together
     x = 0
     y = 0
     ans = ["a", "b", "c", "d"]
@@ -64,6 +64,3 @@ def subtraction():
             print("Only enter a, b, c, or d")
         print()
     print("You have completed the Subtraction Module, congrats!")
-
-
-subtraction()
