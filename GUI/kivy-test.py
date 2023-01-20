@@ -1,3 +1,5 @@
+# sample code using kivy, looks better than kinter and is more simple than customtkinter, 
+# will eventually be used to make app that looks good and runs in a window with buttons
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
@@ -13,7 +15,7 @@ class MyGrid(GridLayout):
 
         self.inside = GridLayout()
         self.inside.cols = 2
-       
+
         self.inside.add_widget(Label(text="First Name: "))
         self.name = TextInput(multiline=False)
         self.inside.add_widget(self.name)
@@ -30,6 +32,7 @@ class MyGrid(GridLayout):
 
         self.submit = Button(text="submit", font_size=40)
         self.add_widget(self.submit)
+
 
 class MyApp(App):
     def build(self):
