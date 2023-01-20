@@ -7,7 +7,7 @@ def addit():
     level = 1
     incorrect = 0
 
-    print('----------------------')
+    print()
     print("In this module, the difficulty increases every 10 correct answers, the difficulty will decrease every 3 incorrect answers")
 
     print()
@@ -21,7 +21,7 @@ def addit():
         for j in range(randint(2, level+1)):
             x.append(randint(0, level*10))
 
-        print('----------------------')
+        print('-------------------------------------')
         ans=''
         while ans not in ['A','B','C','D']:
 
