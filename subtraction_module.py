@@ -80,7 +80,7 @@ def subtraction():
             print("[!] please only input \"A\", \"B\", \"C\", or \"D\"")
         print()
 
-    print('----------------------')
+    print('----------------------------------------------------')
     print("You have completed the subtraction module, congrats!")
     score = correct/(correct+incorrect) * 100
     print(f'you completed {(correct+incorrect)} problems, great job :)')
