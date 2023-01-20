@@ -3,10 +3,9 @@ import addition_module, subtraction_module, multiplication_module, division_modu
 
 print("""
 which of the following modules would you like to do?
-
-addition    subtraction
-multiplication
-division
+┍---------┒   ┍-----------┒   ┍--------------┒   ┍--------┒
+|addition |   |subtraction|   |multiplication|   |division|
+┕---------┛   ┕-----------┛   ┕--------------┛   ┕--------┛
 """)
 ask = input()
 if ask == 'addition':

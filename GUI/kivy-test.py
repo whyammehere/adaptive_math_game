@@ -1,5 +1,9 @@
-# sample code using kivy, looks better than kinter and is more simple than customtkinter, 
-# will eventually be used to make app that looks good and runs in a window with buttons
+# sample code using kivy, looks better than kinter and is more simple than customtkinter,
+# will eventually be used to make app that looks good and runs in a window with buttons\
+
+# note: this file creates UI elements using the python language/widgets, which is clunky and
+# not very efficient. Additional file will create UI created with kivy language which is easier
+# to read and write.
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
@@ -11,7 +15,7 @@ from kivy.uix.button import Button
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
-        self.cols = 2
+        self.cols = 1
 
         self.inside = GridLayout()
         self.inside.cols = 2
@@ -21,8 +25,8 @@ class MyGrid(GridLayout):
         self.inside.add_widget(self.name)
 
         self.inside.add_widget(Label(text="Last Name: "))
-        self.lastname = TextInput(multiline=False)
-        self.inside.add_widget(self.lastname)
+        self.lastName = TextInput(multiline=False)
+        self.inside.add_widget(self.lastName)
 
         self.inside.add_widget(Label(text="Email: "))
         self.email = TextInput(multiline=False)
@@ -30,8 +34,19 @@ class MyGrid(GridLayout):
 
         self.add_widget(self.inside)
 
-        self.submit = Button(text="submit", font_size=40)
+        self.submit = Button(text="Submit", font_size=40)
+        self.submit.bind(on_press=self.pressed)
         self.add_widget(self.submit)
+
+    def pressed(self, instance):
+        name = self.name.text
+        last = self.lastName.text
+        email = self.email.text
+
+        print(f"Name: {name} Last Name: {last} Email: {email}")
+        self.name.text = ''
+        self.lastName.text = ''
+        self.email.text = ''
 
 
 class MyApp(App):

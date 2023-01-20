@@ -44,10 +44,12 @@ def division():
 
         try:
             print()
-            w = input('? = ')
+            w = input()
 
             if g[w] == x:
                 score += 1
+                print()
+                print("Correct! ")
                 print('score=', score)
                 attempts += 1
                 scorepos += 1
@@ -57,7 +59,7 @@ def division():
                 print('score=', score)
                 attempts += 1
         except KeyError:
-            print('enter a,b,c or d')
+            print('enter a, b, c or d')
         print()
     per = 100 * score/attempts
     round(per)
