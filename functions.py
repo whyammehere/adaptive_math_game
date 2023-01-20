@@ -9,7 +9,7 @@ def randAns(ans, deviation=2):
 
     shuffle(a)
     b = {"A": a[0], "B": a[1], "C": a[2], "D": a[3]}
-    print("A:", a[0], "B:", a[1], "C:", a[2], "D:", a[3])
+    print("A:", a[0], "\nB:", a[1], "\nC:", a[2], "\nD:", a[3])
     return b
 
 def incorrectAns(ans):

@@ -1,10 +1,10 @@
+# main file, runs each module
 import addition_module, subtraction_module, multiplication_module, division_module
 
 print("""
 which of the following modules would you like to do?
 
-addition
-subtraction
+addition    subtraction
 multiplication
 division
 """)
