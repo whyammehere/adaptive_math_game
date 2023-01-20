@@ -63,6 +63,6 @@ def subtraction():
                 print("Sorry, that's wrong. The answer was", x)
                 score -= 1
         except KeyError:
-            print("Only enter a, b, c, or d")
+            print("[!] please only input \"A\", \"B\", \"C\", or \"D\"")
         print()
     print("You have completed the Subtraction Module, congrats!")
