@@ -47,4 +47,4 @@ def multiplication():
     print('congrats! you completed the multiplication module!')
     score = ((number-incorrect)/number) * 100
     print(f'you completed {number} problems, great job :)')
-    print(f'your score is: {round(score, 2)} ')
+    print(f'your score is: {round(score, 2)}% ')
