@@ -1,6 +1,7 @@
 from random import randint, seed
 from functions import *
 
+
 def multiplication():
     a = 0
     level = 1
@@ -17,15 +18,14 @@ def multiplication():
         x = (randint(level*-10, level*10))
         y = (randint(level*-10, level*10))
 
-
         print('----------------------')
-        ans=''
-        while ans not in ['A','B','C','D']:
+        ans = ''
+        while ans not in ['A', 'B', 'C', 'D']:
             print(x, '*', y, '= ?')
 
-            z=randAns(x*y,abs(x)+2)
-            ans=input().capitalize()
-            if ans in ['A','B','C','D']:
+            z = randAns(x*y, abs(x)+2)
+            ans = input().capitalize()
+            if ans in ['A', 'B', 'C', 'D']:
                 if z[ans] == x*y:
                     print()
                     print('correct!')
