@@ -84,4 +84,4 @@ def subtraction():
     print("You have completed the subtraction module, congrats!")
     score = correct/(correct+incorrect) * 100
     print(f'you completed {(correct+incorrect)} problems, great job :)')
-    print(f'your score is: {round(score, 2)} ')
+    print(f'your score is: {round(score, 2)}% ')

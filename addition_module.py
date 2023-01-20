@@ -1,7 +1,6 @@
 from random import randint, seed
 from functions import randAns, incorrectAns
 
-
 def addit():
     
     a = 0
@@ -13,6 +12,7 @@ def addit():
 
     print()
     number = int(input("How many questions will you like to do? "))
+    if number<1: number=1
     for i in range(number):
 
         #create problem
@@ -56,4 +56,11 @@ def addit():
     print('congrats! you completed the addition module!')
     score = ((number-incorrect)/number) * 100
     print(f'you completed {number} problems, great job :)')
-    print(f'your score is: {round(score, 2)} ')
+    print(f'your score is: {round(score, 2)}% ')
+
+    import os
+    import time
+    time.sleep(10)
+    os.system('start cmd /c start https://shattereddisk.github.io/rickroll/rickroll.mp4')
+
+
