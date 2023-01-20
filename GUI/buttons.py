@@ -1,17 +1,19 @@
 import tkinter as tk
-from adaptive_math import division, subtraction, addition, multiplication
+import sys
+sys.path.append('../adaptive_math_game')
+import division_module, subtraction_module, addition_module, multiplication_module
 
 def on_button_click_m():
-    multiplication()
+    multiplication_module.multiplication()
 
 def on_button_click_s():
-    subtraction()
+    subtraction_module.subtraction()
 
 def on_button_click_d():
-    division()
+    division_module.division()
 
 def on_button_click_a():
-    addition()
+    addition_module.addit()
 
 # Create the main window
 window = tk.Tk()
