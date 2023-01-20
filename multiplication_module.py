@@ -1,38 +1,50 @@
 from random import randint, seed
-
+from functions import *
 
 def multiplication():
     a = 0
     level = 1
     incorrect = 0
-    for i in range(100):
+
+    print('----------------------')
+    print("In this module, the difficulty increases every 10 correct answers, the difficulty will decrease every 3 incorrect answers")
+    print()
+
+    number = int(input("How many questions will you like to do? "))
+    for i in range(number):
 
         seed()
-        x = (randint(0, level*10))
-        y = (randint(0, level*10))
+        x = (randint(level*-10, level*10))
+        y = (randint(level*-10, level*10))
+
+
         print('----------------------')
-        print(x, '*', y, '= ?')
-        try:
-            if float(input()) == x*y:
-                print()
-                print('correct!')
-                print()
-                a += 1
-                if a == 10:
-                    a = 0
-                    level += 1
+        ans=''
+        while ans not in ['A','B','C','D']:
+            print(x, '*', y, '= ?')
+
+            z=randAns(x*y,abs(x)+2)
+            ans=input().capitalize()
+            if ans in ['A','B','C','D']:
+                if z[ans] == x*y:
+                    print()
+                    print('correct!')
+                    print()
+                    a += 1
+                    if a == 10:
+                        a = 0
+                        level += 1
+                else:
+                    incorrectAns(x*y)
+                    incorrect += 1
+                    if incorrect % 3 == 0 and level > 1:
+                        level -= 1
             else:
+                print('[!] please only input \"A\", \"B\", \"C\", or \"D\"')
                 print()
-                print('incorrect')
-                incorrect += 1
-                if incorrect % 3 == 0 and level > 1:
-                    level -= 1
-                print('the correct answer is', x*y)
-                print()
-        except:
-            print()
-            print('incorrect')
-            print("please enter a number")
-            incorrect += 1
+
+    print('----------------------')
     print('congrats! you completed the multiplication module!')
-    print('you score is:', (100-incorrect), '%')
+    score = ((number-incorrect)/number) * 100
+    print(f'you completed {number} problems, great job :)')
+    print(f'your score is: {round(score, 2)} ')

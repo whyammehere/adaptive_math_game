@@ -8,6 +8,8 @@ def division():
     attempts = 0
     x = 0
     y = 0
+    print('----------------------')
+    print('In this module, for every problem you do wrong, you must do 2 more correctly')
     r = int(input('how many questions would you like to do: '))
     while score < r:
         if score < 5:
@@ -26,7 +28,8 @@ def division():
         while c == x or c == b or c == a:
             c = random.randint(1, 14)
 
-        print(z, '/', y, '= ?')
+        print('----------------------')
+        print(z, '÷', y, '= ?')
         answers = [a, b, c, x]
         random.shuffle(answers)
 

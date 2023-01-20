@@ -14,5 +14,5 @@ def randAns(ans, deviation=2):
 
 def incorrectAns(ans):
     print('incorrect')
-    print('the correct answer is', ans)
+    print('the correct answer was', ans)
     print()

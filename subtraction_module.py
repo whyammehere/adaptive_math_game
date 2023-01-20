@@ -8,8 +8,12 @@ def subtraction():
     x = 0
     y = 0
 
+    correct=0
+    incorrect=0
+
     # ans = ["a", "b", "c", "d"]
-    print("This module contains 31 questions, but for every question you answer incorrectly, you must complete 2 more. ")
+    print('----------------------')
+    print("This module contains 30 questions, but for every question you answer incorrectly, you must complete 2 more. ")
     while level < 7:
         if score < 5:
             x = random.randint(1, 10)
@@ -43,6 +47,7 @@ def subtraction():
         # b = x + random.randint(1, 3)
         # c = x
 
+        print('----------------------')
         print(f"{z} - {y} = ?")
         # answers = [a, b, c, x]
         # random.shuffle(answers)
@@ -63,10 +68,18 @@ def subtraction():
             if ans[w]==x:
                 print("Correct!")
                 score += 1
+                correct+=1
             else:
                 print("Sorry, that's wrong. The answer was", x)
                 score -= 1
+                incorrect+=1
         except KeyError:
             print("[!] please only input \"A\", \"B\", \"C\", or \"D\"")
         print()
-    print("You have completed the Subtraction Module, congrats!")
+
+    print('----------------------')
+    print("You have completed the subtraction module, congrats!")
+    score = correct/(correct+incorrect) * 100
+    print(f'you completed {(correct+incorrect)} problems, great job :)')
+    print(f'your score is: {round(score, 2)} ')
+
