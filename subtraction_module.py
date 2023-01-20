@@ -1,5 +1,5 @@
 import random
-
+from functions import *
 
 def subtraction():
     level = 1
@@ -7,7 +7,8 @@ def subtraction():
     # two numbers that are added together
     x = 0
     y = 0
-    ans = ["a", "b", "c", "d"]
+
+    # ans = ["a", "b", "c", "d"]
     print("This module contains 31 questions, but for every question you answer incorrectly, you must complete 2 more. ")
     while level < 7:
         if score < 5:
@@ -38,25 +39,28 @@ def subtraction():
             level = 7
 
         z = x + y
-        a = x - random.randint(1, 3)
-        b = x + random.randint(1, 3)
-        c = x
+        # a = x - random.randint(1, 3)
+        # b = x + random.randint(1, 3)
+        # c = x
 
         print(f"{z} - {y} = ?")
-        answers = [a, b, c, x]
-        random.shuffle(answers)
+        # answers = [a, b, c, x]
+        # random.shuffle(answers)
 
-        g = {}
-        n = 0
-        for t in answers:
-            g[ans[n]] = t
-            n += 1
-        for m in g:
-            print(m, g[m])
+        # g = {}
+        # n = 0
+        # for t in answers:
+        #     g[ans[n]] = t
+        #     n += 1
+        # for m in g:
+        #     print(m, g[m])
+
+        ans=randAns(x,level*3)
 
         try:
-            w = input("? = ")
-            if g[w] == x:
+            w = input().capitalize()
+            #if g[w] == x:
+            if ans[w]==x:
                 print("Correct!")
                 score += 1
             else:
